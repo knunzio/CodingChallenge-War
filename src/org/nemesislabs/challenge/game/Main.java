@@ -10,7 +10,7 @@ public class Main {
         //and two player.
         int suits = 4;
         int ranks = 13;
-        int players = 3;
+        int players = 2;
         war.play(suits,ranks,players);
     }
 }

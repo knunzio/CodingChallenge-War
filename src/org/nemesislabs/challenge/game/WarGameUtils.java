@@ -217,7 +217,12 @@ public class WarGameUtils {
      *     - list of hands for which cards in play will be moved to winning hand.
      */
     static void surrenderCardsToHandWinner(Hand winnerHand, List<Hand> hands) {
-        for(Hand hand : hands) {
+        //Shuffle the list before surrendering them to simulate
+        //random card addition to the winners deck.
+        List<Hand>handList = new ArrayList<>(hands);
+        Collections.shuffle(handList);
+
+        for(Hand hand : handList) {
             winnerHand.addToBottom(hand.getCardsInPlay());
         }
     }
