@@ -1,4 +1,4 @@
-package org.nwea.challenge.game;
+package org.nemesislabs.challenge.game;
 
 /**
  * Constants used in this game.

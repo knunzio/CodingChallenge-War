@@ -1,9 +1,9 @@
-package org.nwea.challenge.game;
+package org.nemesislabs.challenge.game;
 
 import java.util.List;
 
-import org.nwea.challenge.deck.Deck;
-import org.nwea.challenge.hand.Hand;
+import org.nemesislabs.challenge.deck.Deck;
+import org.nemesislabs.challenge.hand.Hand;
 
 /**
  * Driver class for the War Card Game.
@@ -36,7 +36,7 @@ public class War {
         WarGameUtils.dealDeckToHands(deck, hands, numberOfCardsToDeal);
 
         while (!WarGameUtils.hasWinner(hands)) {
-            WarGameUtils.battle(WarGameConstants.BATTLE_TYPE_BATTLE, WarGameUtils.getHandsInPlay(hands));
+            WarGameUtils.battle(WarGameConstants.BATTLE_TYPE_BATTLE, WarGameUtils.getHandsInPlay(hands), WarGameUtils.getHandsInPlay(hands));
         }
         WarGameUtils.printWinningHand(hands);
     }

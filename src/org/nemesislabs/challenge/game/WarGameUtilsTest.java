@@ -1,4 +1,4 @@
-package org.nwea.challenge.game;
+package org.nemesislabs.challenge.game;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.nwea.challenge.card.Card;
-import org.nwea.challenge.card.Rank;
-import org.nwea.challenge.card.Suit;
-import org.nwea.challenge.hand.Hand;
+import org.nemesislabs.challenge.card.Card;
+import org.nemesislabs.challenge.card.Rank;
+import org.nemesislabs.challenge.card.Suit;
+import org.nemesislabs.challenge.hand.Hand;
 
 /**
  * Test for the static War Game Utility Methods.

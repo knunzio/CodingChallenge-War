@@ -1,13 +1,13 @@
-package org.nwea.challenge.hand;
+package org.nemesislabs.challenge.hand;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Stack;
 
-import org.nwea.challenge.card.Card;
-import org.nwea.challenge.card.Rank;
-import org.nwea.challenge.game.WarGameConstants;
+import org.nemesislabs.challenge.card.Card;
+import org.nemesislabs.challenge.card.Rank;
+import org.nemesislabs.challenge.game.WarGameConstants;
 
 /**
  * Represents a Hand in the Card Game War.

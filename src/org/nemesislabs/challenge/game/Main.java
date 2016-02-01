@@ -1,4 +1,4 @@
-package org.nwea.challenge.game;
+package org.nemesislabs.challenge.game;
 
 public class Main {
 
@@ -10,7 +10,7 @@ public class Main {
         //and two player.
         int suits = 4;
         int ranks = 13;
-        int players = 2;
+        int players = 3;
         war.play(suits,ranks,players);
     }
 }

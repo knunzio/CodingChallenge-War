@@ -1,12 +1,12 @@
-package org.nwea.challenge.deck;
+package org.nemesislabs.challenge.deck;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
-import org.nwea.challenge.card.Card;
-import org.nwea.challenge.card.Rank;
-import org.nwea.challenge.card.Suit;
+import org.nemesislabs.challenge.card.Card;
+import org.nemesislabs.challenge.card.Rank;
+import org.nemesislabs.challenge.card.Suit;
 
 /**
  * Implements the Deck interface.  Object representing a
@@ -53,16 +53,7 @@ public class DeckImpl implements Deck{
      * Shuffle the deck.
      */
     public void shuffle() {
-
-        Random rand = new Random();
-        List<Card> shuffledDeck = new ArrayList<>();
-
-        while ( !deck.isEmpty() ) {
-            int cardIndex = rand.nextInt(deck.size());
-            shuffledDeck.add(deck.get(cardIndex));
-            deck.remove(cardIndex);
-        }
-        deck = shuffledDeck;
+        Collections.shuffle(deck);
     }
 
 

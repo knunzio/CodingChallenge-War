@@ -1,6 +1,6 @@
-package org.nwea.challenge.deck;
+package org.nemesislabs.challenge.deck;
 
-import org.nwea.challenge.card.Card;
+import org.nemesislabs.challenge.card.Card;
 
 /**
  */

@@ -1,12 +1,12 @@
-package org.nwea.challenge.hand;
+package org.nemesislabs.challenge.hand;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-import org.nwea.challenge.card.Card;
-import org.nwea.challenge.card.Rank;
-import org.nwea.challenge.card.Suit;
+import org.nemesislabs.challenge.card.Card;
+import org.nemesislabs.challenge.card.Rank;
+import org.nemesislabs.challenge.card.Suit;
 
 import org.junit.Assert;
 

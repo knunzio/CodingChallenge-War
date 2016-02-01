@@ -1,6 +1,4 @@
-package org.nwea.challenge.card;
-
-import java.util.Comparator;
+package org.nemesislabs.challenge.card;
 
 /**
  * A Card object representing a Card from a French Deck.
@@ -28,7 +26,7 @@ public class Card implements Comparable<Card>{
     /**
      * Getter for Card Rank.
      * @return
-     *     - the card ranks - see org.nwea.challenge.card.Rank.
+     *     - the card ranks - see Rank.
      */
     public Rank getRank(){
         return rank;
@@ -37,7 +35,7 @@ public class Card implements Comparable<Card>{
     /**
      * Getter for Card Suit
      * @return
-     *     - the card suit - see org.nwea.challenge.card.Suit.
+     *     - the card suit - see Suit.
      */
     public Suit getSuit(){
         return suit;
@@ -52,14 +50,4 @@ public class Card implements Comparable<Card>{
     public String toString(){
         return this.rank.toString() + this.suit.toString();
     }
-
-    /**
-     * Custom Comparator for Cards.
-     */
-    public static Comparator<Card> CardComparator = new Comparator<Card>() {
-
-        public int compare(Card card1, Card card2) {
-            return card1.compareTo(card2);
-        }
-    };
 }

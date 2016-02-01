@@ -1,8 +1,8 @@
-package org.nwea.challenge.deck;
+package org.nemesislabs.challenge.deck;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.nwea.challenge.card.Card;
+import org.nemesislabs.challenge.card.Card;
 
 /**
  */
@@ -28,9 +28,8 @@ public class DeckImplTest {
     public void testShuffleDeck(){
         Deck deck = new DeckImpl();
         deck.create(4,13);
-        System.out.println(deck);
         deck.shuffle();
-        System.out.println(deck);
+        Assert.assertNotNull(deck);
     }
 
     @Test

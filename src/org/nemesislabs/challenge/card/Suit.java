@@ -1,4 +1,4 @@
-package org.nwea.challenge.card;
+package org.nemesislabs.challenge.card;
 
 /**
  * Enumeration representing the suits of a french Deck of

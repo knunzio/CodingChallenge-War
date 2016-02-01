@@ -1,12 +1,12 @@
-package org.nwea.challenge.game;
+package org.nemesislabs.challenge.game;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.nwea.challenge.deck.Deck;
-import org.nwea.challenge.deck.DeckImpl;
-import org.nwea.challenge.hand.Hand;
+import org.nemesislabs.challenge.deck.Deck;
+import org.nemesislabs.challenge.deck.DeckImpl;
+import org.nemesislabs.challenge.hand.Hand;
 
 /**
  * War Game Utility class. Collection of data injected methods
@@ -14,7 +14,7 @@ import org.nwea.challenge.hand.Hand;
  */
 public class WarGameUtils {
 
-    private static int playCounter = 1;
+    private static int playCounter = 0;
 
     /**
      * Returns a shallow copy List of the Hands in play.  For limiting
@@ -71,7 +71,7 @@ public class WarGameUtils {
     static void dumpHands(List<Hand> hands) {
 
         System.out.println ("****************************************************************************");
-        System.out.println ("Play Count: " + playCounter++);
+        System.out.println ("Play Count: " + ++playCounter);
         for (int ii = 0; ii < hands.size(); ii++) {
             System.out.println("Hand " + ii + ": " + hands.get(ii).toString());
         }
@@ -155,21 +155,23 @@ public class WarGameUtils {
      * Recursively executes the War 'battle' and War 'War' if ranks match.
      * @param battleType
      *     - A battle type: BATTLE_TYPE_BATTLE, BATTLE_TYPE_WAR
-     * @param hands
+     * @param handsToBattle
      *     - List of hands used in the battle.
+     * @param activeHandsInGame
+     *     - List of hands active in this game.
      */
-    static void battle(int battleType, List<Hand> hands) {
+    static void battle(int battleType, List<Hand> handsToBattle, List<Hand> activeHandsInGame) {
 
-        flipCardsForBattleType(battleType, hands);
+        flipCardsForBattleType(battleType, handsToBattle);
 
-        List<Hand> winnerHandList = getBattleWinnerForHands(hands);
+        List<Hand> winnerHandList = getBattleWinnerForHands(handsToBattle);
 
-        WarGameUtils.dumpHands(hands);
+        WarGameUtils.dumpHands(handsToBattle);
 
         if(WarGameConstants.BATTLE_WINNER_HAND_COUNT == winnerHandList.size()) {
-            surrenderCardsToHandWinner(winnerHandList.get(0), hands);
+            surrenderCardsToHandWinner(winnerHandList.get(0), activeHandsInGame);
         } else {
-            battle(WarGameConstants.BATTLE_TYPE_WAR, winnerHandList);
+            battle(WarGameConstants.BATTLE_TYPE_WAR, winnerHandList, getHandsInPlay(activeHandsInGame));
         }
     }
 

@@ -1,4 +1,4 @@
-package org.nwea.challenge.card;
+package org.nemesislabs.challenge.card;
 
 import java.util.Comparator;
 
